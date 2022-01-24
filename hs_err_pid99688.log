@@ -1,0 +1,35 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0xa) at pc=0x000000010fcc7f71, pid=99688, tid=24835
+#
+# JRE version: OpenJDK Runtime Environment AdoptOpenJDK-16.0.1+9 (16.0.1+9) (build 16.0.1+9)
+# Java VM: OpenJDK 64-Bit Server VM AdoptOpenJDK-16.0.1+9 (16.0.1+9, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, bsd-amd64)
+# Problematic frame:
+# V  [libjvm.dylib+0x4c7f71]  _ZN8CodeHeap8allocateEm+0x181
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/AdoptOpenJDK/openjdk-support/issues
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Djdk.home=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home/ -Djruby.home=/Users/rahulkoshta/.rvm/rubies/jruby-9.2.9.0 -Djruby.script=jruby -Djruby.shell=/bin/sh -Djffi.boot.library.path=/Users/rahulkoshta/.rvm/rubies/jruby-9.2.9.0/lib/jni:/Users/rahulkoshta/.rvm/rubies/jruby-9.2.9.0/lib/jni/Darwin -Xss2048k --module-path=/Users/rahulkoshta/.rvm/rubies/jruby-9.2.9.0/lib/jruby.jar --add-opens=java.base/java.io=org.jruby.dist --add-opens=java.base/java.nio.channels=org.jruby.dist --add-opens=java.base/sun.nio.ch=org.jruby.dist --add-opens=java.management/sun.management=org.jruby.dist -Dfile.encoding=UTF-8 -Djava.security.egd=file:/dev/urandom org/jruby/Main /Users/rahulkoshta/.rvm/gems/jruby-9.2.9.0/bin/jruby_executable_hooks /Users/rahulkoshta/.rvm/gems/jruby-9.2.9.0/bin/rails c
+
+Host: MacBookAir10,1 x86_64 2400 MHz, 8 cores, 8G, Darwin 20.6.0, macOS 10.16 (20G95)
+Time: Wed Jan 19 13:41:26 2022 IST elapsed time: 10.587340 seconds (0d 0h 0m 10s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fd71c022c00):  JavaThread "C1 CompilerThread0" daemon [_thread_in_vm, id=24835, stack(0x000000030adcf000,0x000000030aecf000)]
+
+
+Current CompileTask:
+C1:  10587 8702       3       jnr.ffi.Pointer::<init> (21 bytes)
+
+Stack: [0x000000030adcf000,0x000000030aecf000],  sp=0x000000030aece480,  free space=1021k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.dylib+0x4c7f71]  _ZN8CodeHeap8allocateEm+0x181
+V
